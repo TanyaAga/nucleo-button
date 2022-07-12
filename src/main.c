@@ -98,7 +98,14 @@ int main(void)
   /* USER CODE BEGIN WHILE */
 
   while (1)
-  { if(HAL_GPIO_ReadPin(GPIOC, GPIO_PIN_13)== GPIO_PIN_SET && A)
+  { if(HAL_GPIO_ReadPin(GPIOC, GPIO_PIN_13)== GPIO_PIN_SET)
+    {
+      HAL_GPIO_TogglePin(GPIOC, GPIO_PIN_7);
+      HAL_GPIO_TogglePin(GPIOB, GPIO_PIN_7);
+      HAL_GPIO_TogglePin(GPIOB, GPIO_PIN_14);
+      HAL_Delay(300);
+      //while(HAL_GPIO_ReadPin(GPIOC, GPIO_PIN_13)== GPIO_PIN_SET);
+    /*if(HAL_GPIO_ReadPin(GPIOC, GPIO_PIN_13)== GPIO_PIN_SET && A)  // to off or on while continous pressing button
       {
       HAL_GPIO_TogglePin(GPIOC, GPIO_PIN_7);
       HAL_GPIO_TogglePin(GPIOB, GPIO_PIN_7);
@@ -108,7 +115,8 @@ int main(void)
     else if (HAL_GPIO_ReadPin(GPIOC, GPIO_PIN_13)==GPIO_PIN_RESET)
       {
       A=true;
-      }
+      }*/
+  }
   }
   /*while (1) 
   {
