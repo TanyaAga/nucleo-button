@@ -1,0 +1,12 @@
+{
+	"folders": [
+		{
+			"path": "..\\..\\stm_ledblink"
+		},
+		{
+			"name": "nucleo button",
+			"path": ".."
+		}
+	],
+	"settings": {}
+}
